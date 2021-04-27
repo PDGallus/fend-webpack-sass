@@ -7,14 +7,14 @@ module.exports = {
     entry: './src/client/index.js',
     output: {
         libraryTarget: 'var',
-        library: 'Client'
+        library: 'myLib'
     },
     mode: 'development',
     devtool: 'source-map',
     module: {
         rules: [
             {
-                test: '/\.js$/',
+                test: /\.js$/,
                 exclude: /node_modules/,
                 loader: "babel-loader"
             },

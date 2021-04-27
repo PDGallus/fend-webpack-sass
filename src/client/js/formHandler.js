@@ -4,7 +4,8 @@ function handleSubmit(event) {
     // check what text was put into the form field
     let formText = document.getElementById('name').value
 
-    Client.checkForName(formText)
+    myLib.checkForName(formText)
+    myLib.fetchWeather()
 
     console.log("::: Form Submitted :::")
     fetch('http://localhost:8081/test')
